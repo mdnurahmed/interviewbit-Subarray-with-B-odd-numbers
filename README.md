@@ -11,7 +11,7 @@ Find the total number of subarrays having exactly B odd numbers.
 
 ## Problem Constraints
 - 1 <= length of the array <= 10^5
-- 1 <= A[i] <= 109
+- 1 <= A[i] <= 10^9
 - 0 <= B <= A
 
 
@@ -68,6 +68,6 @@ Complexity : O(N) time and O(N) space where N is lenght of A.
 
 ### Way 2 
 
-We can have a hashmap 'map'so that map[t] will tell us the number of subarrays starting from index 0 that ends before index i and have t odd numbers. So if number of odd numbers till i is x , number of subarrays that end at i and fulfills the condition will be map[x-B]. We can find the total result if we do this for every index . 
+We can have a hashmap 'map' so that map[t] will tell us the number of subarrays starting from index 0 that ends before index i and have t odd numbers. So if number of odd numbers till i is x , number of subarrays that end at i and fulfills the condition will be map[x-B]. We can find the total result if we do this for every index . 
 
 Complexity : O(N) time and O(N) space where N is lenght of A. 
