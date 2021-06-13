@@ -62,12 +62,12 @@ Lets try to calculate 2 tables mx[ ] and mn[ ] . mx[i] will tell us maximum inde
 
 So , result = sum(mx[i]-mn[i]+1) for i = 0 to A.size() 
 
-We can calculate mx[ ] and mn[ ] with 2 for loops easily in N^2 complexity where N is lenght of A . But we can see it will always be mx[i+1] >= mx[i] and mn[i+1] >= mn[i] . So we can reduce the complexity using sliding window or 2 pointer. 
+We can calculate mx[ ] and mn[ ] with 2 for loops easily in N^2 complexity where N is length of A . But we can see it will always be mx[i+1] >= mx[i] and mn[i+1] >= mn[i] . So we can reduce the complexity using sliding window or 2 pointer. 
 
-Complexity : O(N) time and O(N) space where N is lenght of A. 
+Complexity : O(N) time and O(N) space where N is length of A. 
 
 ### Way 2 
 
 We can have a hashmap 'map' so that map[t] will tell us the number of subarrays starting from index 0 that ends before index i and have t odd numbers. So if number of odd numbers till i is x , number of subarrays that end at i and fulfills the condition will be map[x-B]. We can find the total result if we do this for every index . 
 
-Complexity : O(N) time and O(N) space where N is lenght of A. 
+Complexity : O(N) time and O(N) space where N is length of A. 
