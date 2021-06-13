@@ -58,11 +58,11 @@ Return the total number of subarrays having exactly B odd numbers.
 ## My Approach 
 ### Way 1 
 
-Lets try to calculate 2 tables mx[] and mn[] . mx[i] will tell us maximum index we can go up to if we start from i so that the segment A[i...mx[i]] fulfills the condition . Similarly , mn[i] will tell us minimum index we can go up to if we start from i so that the segment A[i...mn[i]] fulfills the condition . Then number of subarrays that starts from i and fulfills the condition is  - mx[i]-mn[i]+1
+Lets try to calculate 2 tables mx[ ] and mn[ ] . mx[i] will tell us maximum index we can go up to if we start from i so that the segment A[i...mx[i]] fulfills the condition . Similarly , mn[i] will tell us minimum index we can go up to if we start from i so that the segment A[i...mn[i]] fulfills the condition . Then number of subarrays that starts from i and fulfills the condition is  - mx[i]-mn[i]+1
 
 So , result = sum(mx[i]-mn[i]+1) for i = 0 to A.size() 
 
-We can calculate mx[] and mn[] with 2 for loops easily in N^2 complexity where N is lenght of A . But we can see it will always be mx[i+1] >= mx[i] and mn[i+1] >= mn[i] . So we can reduce the complexity using sliding window or 2 pointer. 
+We can calculate mx[ ] and mn[ ] with 2 for loops easily in N^2 complexity where N is lenght of A . But we can see it will always be mx[i+1] >= mx[i] and mn[i+1] >= mn[i] . So we can reduce the complexity using sliding window or 2 pointer. 
 
 Complexity : O(N) time and O(N) space where N is lenght of A. 
 
